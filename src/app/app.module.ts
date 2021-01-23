@@ -11,10 +11,11 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon'; 
+import {MatIconModule} from '@angular/material/icon';
+import { TotalComponent } from './components/total/total.component'; 
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, ProductComponent],
+  declarations: [AppComponent, HeaderComponent, ProductComponent, TotalComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
