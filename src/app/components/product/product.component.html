@@ -1,5 +1,10 @@
 <app-total totalProduct="1111" price="333"></app-total>
 
+<div *ngIf="products.length == 0" class="section-info">
+  <p>No hay productos</p>
+  <button mat-raised-button color="primary" routerLink="/add">agregar</button>
+</div>
+
 <mat-card class="card-product" *ngFor="let item of products">
   <mat-card-header>
     <mat-card-title>{{item.name}}</mat-card-title>

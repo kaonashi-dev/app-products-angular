@@ -12,10 +12,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
-import { TotalComponent } from './components/total/total.component'; 
+import { TotalComponent } from './components/total/total.component';
+import { AddComponent } from './components/add/add.component'; 
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, ProductComponent, TotalComponent],
+  declarations: [AppComponent, HeaderComponent, ProductComponent, TotalComponent, AddComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

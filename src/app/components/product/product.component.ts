@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../../models/Product';
+import { ProductService } from "../../service/product.service";
 
 @Component({
   selector: 'app-product',
@@ -9,28 +10,14 @@ import { Product } from '../../models/Product';
 export class ProductComponent implements OnInit {
   products: Product[] = [];
 
-  constructor() {}
+  constructor(public service: ProductService) { }
 
   ngOnInit(): void {
-    this.products = [
-      {
-        id: 1,
-        name: 'Manzana',
-        price: 1000
-      },
-      {
-        id: 2,
-        name: 'Camisa',
-        price: 30000
-      },{
-        id: 3,
-        name: 'Laptop',
-        price: 1000000
-      }
-    ]
+    this.products = this.service.products;
   }
 
-  onDelete(product: Product){
-    this.products = this.products.filter(item => item.id != product.id);
+  onDelete(product: Product) {
+    this.service.products = this.service.products.filter(item => item.id != product.id);
+    this.products = this.service.products;
   }
 }
