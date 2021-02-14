@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +13,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { TotalComponent } from './components/total/total.component';
 import { AddComponent } from './components/add/add.component';
 
@@ -22,12 +22,12 @@ import { AddComponent } from './components/add/add.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatSliderModule,
     MatCardModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent],

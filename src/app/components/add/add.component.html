@@ -1,11 +1,18 @@
-<mat-card>
-    <mat-card-title>
-        Informacion de producto
-    </mat-card-title>
-    <mat-card-content>
-        <mat-form-field appearance="fill">
-            <mat-label>Input</mat-label>
-            <input matInput placeholder="Escribe el nombre del producto">
-        </mat-form-field>
-    </mat-card-content>
-</mat-card>
+<div class="container">
+    <mat-card class="text-center">
+        <mat-card-title>
+            Informacion de producto
+        </mat-card-title>
+        <mat-card-content>
+            <div class="row mb-3">
+                <input type="text" [(ngModel)]="name" name="name" class="mx-auto" placeholder="nombre del producto">
+            </div>
+            <div class="row mb-3">
+                <input type="number" [(ngModel)]="price" name="price" class="mx-auto" placeholder="precio del producto">
+            </div>
+            <div class="col">
+                <button (click)="create()" mat-raised-button color="primary">agregar</button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

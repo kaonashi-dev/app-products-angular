@@ -10,16 +10,16 @@ export class ProductService {
 
   public products: Product[] = [
     {
-      id: 1,
+      id: this.getRandomString(),
       name: 'Manzana',
       price: 1000
     },
     {
-      id: 2,
+      id: this.getRandomString(),
       name: 'Camisa',
       price: 30000
     }, {
-      id: 3,
+      id: this.getRandomString(),
       name: 'Laptop',
       price: 1000000
     }
@@ -31,4 +31,13 @@ export class ProductService {
     return total;
   }
 
+  public getRandomString():string {
+    let str = '';
+    for (let i = 0; i < 5; i++) {
+      let rand = Math.floor(Math.random() * 62);
+      let charCode = rand += rand > 9 ? (rand < 36 ? 55 : 61) : 48;
+      str += String.fromCharCode(charCode);
+    }
+    return str;
+  }
 }
